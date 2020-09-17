@@ -1,0 +1,214 @@
+类和对象的练习题，有代码示例
+1 在ibm.com.testdemo中创建address包并创建Address类，属性有city和street
+2 在ibm.com.testdemo中创建employee包并创建Employee类，属性有id，age, name, gender,Address(前面创建的类)，show方法打印出所有的属性来。
+3 创建Employee对象，并为其设置属性 id=112233,age=24,name=张三，gender=男，创建Address对象，city=江门，street=迎宾大道99号。将张三的信息打印出来。
+
+变量类型的练习题，有代码示例
+1 创建一个testVar类，类中设置八种基本类型的属性，以及一个数组引用的属性，然后将其打印出来，验证一下他们的默认值是多少。
+2 将short类型转成byte类型，
+3 将int类型转成long类型。
+
+
+修饰符的练习题
+1 验证private只能在类内部访问，其他类无法访问被private修饰的变量
+2 验证private 不能修饰类
+3 验证protected 只能作用于当前包，其他包的类无法访问。
+4 验证protected 不能修饰类
+
+
+基本语法的练习题
+1 Java基本语法语句-下面程序会输出什么？
+			public static void main(String args[]) {
+				int i=0,x=3;
+				while(x<9){
+					x+=2; 
+				    x++;
+				    ++i;
+				}
+			System.out.println("i="+i);
+			}
+2
+
+2 Java基本语法语句-switch 语句能否作用在 byte 上，能否作用在 long 上，能否作用在 String 上?用代码敲一下
+
+
+工具类的练习题
+1 将hello 和 world 拼接在一起，变成 hello world 一句话，可以有几种写法。（提示: 加号,concat,StringBuilder）
+2 StringBuilder类是StringBuffer类的替代类，两者的共同点是都是可变长度字符串，其中线程安全的类是 stringbuffer。
+3 创建一个int数组，并用for和foreach两种方式遍历打印出来
+4 获取当前的日期，并对当前的日期格式化为 yyyy-MM-dd hh:mm:ss
+
+异常的练习题，问题2有代码示例
+1 自己创建一个异常并抛出来
+2 finally和return执行顺序？
+3 final, finally的区别
+
+
+jvm的练习题
+1 jdk和jre的区别是什么？
+2 jvm由哪几部分组成？
+
+
+晚上的作业
+1 什么是类，对象，他们的关系是怎么样的。
+
+类就是对于多种属性以及方法的集合的抽象名称，是一种的抽象的数据类型
+对象是基于类下的实例，是具体的概念，每个对象有着不同属性，通过属性的差异区分对象
+
+2 构造方法有几种？请简单说一下
+
+public class jjp () {
+	private int m = 1;
+	jjp () {
+	
+	}//无参构造方法
+	jjp (int m){
+		this.m = m;
+	}//有参构造方法
+}
+
+
+3 数据类型有几种？以及每种的默认值是多少?请简单说一下
+
+8种    	int a; 		0
+	float b;		0.0
+	double c;		0.0
+	long d;		0
+	short e;		0
+	char f;		
+	byte g;		0
+	String h;		null
+
+4 强制类型转换需要注意什么？
+
+数据类型转换必须满足如下规则：
+1. 不能对boolean类型进行类型转换。
+2. 不能把对象类型转换成不相关类的对象。
+3. 在把容量大的类型转换为容量小的类型时必须使用强制类型转换。
+4. 转换过程中可能导致溢出或损失精度
+
+5 变量有几种？他们的作用范围是什么？
+
+三种
+类变量：独立于我方法之外的变量，用 static 修饰。
+实例变量：独立于方法之外的变量，不过没有 static 修饰。
+局部变量：类的方法中的变量。
+
+6 访问修饰符有几种？他们的作用范围是什么？
+
+四种		类内部	本包	子类	外部包	
+private 		√	×	×	×
+default		√	√	×	×
+protected		√	√	√	×
+public		√	√	√	√
+
+7 static 修饰的类，变量，方法和普通对象的类，变量，方法有什么区别
+
+1、static修饰的变量和方法，在类加载时即被初始化，可直接通过类名.变量名和类型.方法名进行调用。
+2、static修饰的变量，在类加载时会被分配到数据区的方法区。类的实例可共享方法区中的变量。如果static修饰的变量发生改变，那么所有类实例引用的变量都会一起发生改变。
+3、static修饰的方法中不能使用this或super，static修饰的方法属于类的方法，而this或super只是对象的方法。
+4、static修饰的方法不能引用非static 修饰的变量, 在类加载过程中，当static修饰的方法加载完成时，非static修饰的变量还未加载，所以无法引用非static修饰的变量。
+5、非static修饰的方法可以引用static 修饰的变量，在类加载过程中，static修饰的变量优先完成加载，所以当非static修饰的方法完成加载后可以引用static 修饰的变量。
+    经过static修饰的类
+
+8 a++ 和 ++a的区别是什么
+a++先执行后赋值，++a先赋值后执行
+
+9 运算符优先级最高的是哪个？
+()
+
+10 循环语句有几种？请简单列一下
+while,do while ,for
+
+11 if条件语句可以有多个else吗？
+不能，一个if语句只有一个else与之对应
+
+12 continue 和 break 在循环语句中的区别？
+continue停顿后下一次循环继续执行，break直接跳出循环体
+
+13 StringBuilder 与StringBuffer的区别？
+
+
+14 final, finally的区别？
+final修饰常量只能被赋值一次，修饰的都会变为常量；
+finally修饰的代码块都要被执行，除了退出系统System.exit(0);
+
+
+15 jvm由哪几部分组成
+栈，堆，方法区，代码块，静态区
+
+16 用java语言描述你周围常见的事物？例如一只猫，一条狗，一座大楼，空调，手机，等等。
+
+
+/*16 用java语言描述你周围常见的事物？例如一只猫，一条狗，一座大楼，空调，手机，等等。*/
+
+public class test16 {
+
+	public static void main(String[] args) {
+		智能手机 z = new 智能手机();
+		z.上网();
+		z.打电话();
+	}
+
+}
+
+//一只猫
+abstract class 猫{
+	public void 吃() {
+		System.out.println("吃鱼");
+	}
+}
+
+//一条狗
+abstract class 狗{
+	public void 吃() {
+		System.out.println("吃骨头");
+	}
+	public void 看家() {
+		
+	}
+}
+
+//一座大楼
+abstract class 大楼{
+	public void 住() {
+		//System.out.println("住人");
+	}
+}
+
+//空调
+abstract class 空调{
+	public void 制冷() {
+		System.out.println("智能功能run"+"房间变冷了");
+	}
+	
+	public void 定时关闭() {
+		
+	}
+}
+
+//手机
+abstract class 手机{
+	public void 打电话() {
+		System.out.println("打电话run"+"实现通信");
+	}
+	public void 上网() {
+		
+	}
+}
+
+//这里只写一个继承抽象类成为实例的例子
+class 智能手机 extends 手机{
+	public void 上网() {
+			System.out.println("我是智能手机，上网功能更强了");
+		}
+}
+
+17 自己手动画一下jvm的内存分部图。
+
+      JVM虚拟机数据区域
+程序计数器区	本地方法栈
+堆 		java虚拟机栈	
+	
+	本地内存
+元数据区		直接内存
